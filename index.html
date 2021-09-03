@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Tailwindcss and Fonts -->
+  <link rel="stylesheet" href="tailwind.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet" />
+  <!-- Custom styling -->
+  <style>
+    body {
+      font-family: "Space Grotesk", sans-serif;
+    }
+
+    .selected {
+      border: 1px solid purple;
+    }
+
+    .details {
+      font-size: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .row {
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .promo {
+      background: #ccc;
+      padding: 3px;
+    }
+
+    .footer {
+      text-align: center;
+    }
+
+    .btn {
+      background-color: brown;
+      border: 5px;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 2px;
+    }
+  </style>
+  <title>Macbook</title>
+</head>
+
+<body>
+  <main>
+    <div class="container mx-auto px-4 md:px-2">
+      <div class="grid grid-cols-2">
+        <!-- Image -->
+        <div class="p-5 border rounded border-gray-200 m-5">
+          <div class="h-96 w-full">
+            <img src="images/mac.png" id="art" class="w-full rounded h-full object-cover" alt="" />
+          </div>
+        </div>
+        <!-- Options -->
+        <div class="mt-10 max-w-lg mx-auto">
+          <h1><span id="desc" class="text-lg text-gray-700">Apple iMac 24" 4K Retina Display M1 8 Core CPU, 7 Core GPU,
+              256GB SSD, Blue (MJV93ZP/A) 2021.
+            </span></h1>
+          <br>
+
+          <h6 class="details">The Apple Blue (MJV93ZP/A) iMac comes with Apple M1 chip (8 Core CPU and 7 Core GPU),
+            Retina 24" 4K 4096 x 2304 P3 display, 8GB RAM + 256GB SSD, Apple Integrated 7-core GPU, 1080p FaceTime HD
+            camera with M1 ISP. The 802.11ax Wi-Fi 6 wireless networking, IEEE 802.11a/b/g/n/ac and Bluetooth 5.0
+            wireless technology are compatible with this Apple iMac.</h6>
+          <div class="pt-10">
+
+            <!-- ------------memory start------------
+            -------------------------- -->
+
+
+            <div id="memoryyy">
+
+              <h3 class="m-2 ">Memory</h3>
+              <button class="
+                  p-2
+                    border border-black-200
+                    shadow
+                    hover:shadow-lg
+                    rounded
+                  " id="eight">
+                8GB Unified Memory
+              </button>
+              <button id="sixteen" class="
+                   p-2
+                    border border-black-200
+                    shadow
+                    hover:shadow-lg
+                    rounded 50px
+                  ">
+                16GB Unified Memory
+              </button>
+
+
+            </div>
+
+            <!-- memory end-----------------------
+            ---------------------------------------------- -->
+          </div>
+
+          <br>
+          <br>
+
+          <!-- -------------------storage start-------------------------
+            -------------------------------------- -->
+
+          <h3 class="m-2 ">Storage</h3>
+          <button class="
+              p-2
+                border border-black-200
+                shadow
+                hover:shadow-lg
+                rounded
+              " id="store1">
+            256GB SSD Storage
+          </button>
+          <button id="store2" class="
+               p-2
+                border border-black-200
+                shadow
+                hover:shadow-lg
+                rounded 50px
+              ">
+            512GB SSD Storage
+          </button>
+          <button id="store3" class="
+               p-2
+                border border-black-200
+                shadow
+                hover:shadow-lg
+                rounded 50px
+              ">
+            1TB SSD Storage
+          </button>
+
+          <!-- strorage end-----------------
+            ------------------------------------------ -->
+          <br>
+          <br>
+          <br>
+
+          <!-- ------------------delivery option start ----------------------
+        ------------------------------------- -->
+
+          <h3 class="m-2 ">Choose Your Delivery Option</h3>
+          <button id="delivery1" class="
+               p-2
+               my-1
+                border border-black-200
+                shadow
+                hover:shadow-lg
+                rounded 50px
+              ">
+            Friday,25 Aug FREE Prime Delivery
+          </button>
+          <button id="delivery2" class="
+               p-2
+               my-1
+                border border-black-200
+                shadow
+                hover:shadow-lg
+                rounded 50px
+              ">
+            Friday,21 Aug Delivery Charge $20
+          </button>
+
+          <!-- delivery soption stop-------------------
+            ----------------------------------------------- -->
+
+
+
+          <!-------------------------- total cost start -------------------------
+            --------------------------------------------------->
+
+          <br>
+          <br>
+          <br>
+
+
+          <div class="row">
+            <div class="column">
+              <table>
+                <tr>
+                  <th>Best Price</th>
+
+                  <th id="mainp">1299$</th>
+                </tr>
+
+                <tr>
+                  <th>Extra Memory cost</th>
+
+                  <th id="memo1">0$</th>
+                </tr>
+
+                <tr>
+                  <th>Extra Storage cost</th>
+
+                  <th id="storo">0$</th>
+
+                </tr>
+
+                <tr>
+                  <th>Delivery Cost</th>
+
+                  <th id="delo">0$</th>
+                </tr>
+                <hr>
+
+                <tr>
+                  <th>Total Cost</th>
+
+                  <th> <span id="final">1299</span>$</th>
+                </tr>
+
+              </table>
+
+
+              <!-- -----------------------total cost end---------------------------
+            ------------------------------------------------ -->
+
+
+
+
+              <!-- coupon code start---------------
+                ------------------------------- -->
+
+
+              <br>
+              <h2><b>20% OFF YOUR PURCHASE</b></h2>
+              <br>
+              <p>Use Promo Code: <span class="promo">stevekaku</span></p>
+              <br>
+
+              <br>
+              <h3 class="bg-red-200">Add Promo Code</h3>
+              <br>
+
+              <div>
+
+
+                <form class="">
+                  <input id="discount-field" class="bg-red-200 w-100% border-8" type="search"
+                    placeholder="Apply Coupon Code" aria-label="Search">
+                  <button id="promo-code" class="btn" type="submit">Apply</button>
+                </form>
+              </div>
+
+
+              <!-- coupon code end-------------------
+            ---------------------------------------- -->
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+  </main>
+  <br><br><br><br>
+
+
+  <!-- footer---------
+    -------------------------- -->
+
+  <b>
+    <footer class="footer">Total:- <span id="grand">1299</span>$</footer>
+  </b>
+
+
+  <!-- Custom js -->
+  <script src="macbook.js"></script>
+</body>
+
+</html>
